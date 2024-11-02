@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official WhatsApp Bot from Official WhatsApp"> <!-- Deskripsi ditambahkan -->
+    <title>Columbina Official</title>
+    <link rel="icon" href="https://i.pinimg.com/736x/d9/2f/90/d92f9065e073b2b62ce120e04cb9072b.jpg" type="image/jpeg"> <!-- Favicon -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url('https://i.pinimg.com/736x/d9/2f/90/d92f9065e073b2b62ce120e04cb9072b.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            overflow: hidden;
+            user-select: none;
+            -webkit-user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .navbar img {
+            height: 30px;
+            margin-right: 10px; /* Memberikan jarak antara logo dan teks */
+        }
+
+        .navbar span {
+            font-size: 24px; /* Ukuran font untuk teks "Columbina" */
+            color: white; /* Warna font */
+            font-weight: bold; /* Membuat teks lebih tebal */
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        html, body {
+            overflow: hidden; /* Menyembunyikan scroll bar */
+            touch-action: none; /* Mencegah zoom dan geser pada touchscreen */
+            user-select: none; /* Mencegah pemilihan teks */
+            -webkit-user-drag: none; /* Mencegah drag pada elemen */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="https://i.pinimg.com/736x/e7/45/14/e74514666819e6253de3dfd7328c1a90.jpg" alt="Logo">
+        <span>Columbina</span> <!-- Teks "Columbina" ditambahkan di navbar -->
+    </div>
+    <div class="container">
+        <h1>Redirecting in <span id="countdown">3</span> seconds...</h1>
+        <p>Official WhatsApp Bot from Official WhatsApp</p> <!-- Deskripsi ditambahkan -->
+        <p>You will be redirected to our WhatsApp contact shortly.</p>
+        <p>Please wait, or <a href="https://wa.me/6285183293021" style="color: #00ffcc;">click here</a> if not redirected.</p>
+    </div>
+    <div class="footer">
+        © copyright 2020 - 2024 | Azrefta
+    </div>
+
+    <script>
+        let countdown = 3;
+        const countdownElement = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'https://wa.me/6285183293021';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
